@@ -1,4 +1,66 @@
-## 🧩 Yazılım Mimarisi
+# 🚦 Dynamic Urban Transportation Route Planner
+### Dinamik Şehir İçi Ulaşım Rota Planlama Sistemi
+
+> Otobüs, tramvay ve taksiyi tek bir graf yapısı altında birleştiren;  
+> ücret, süre ve mesafe kriterlerine göre en uygun rotayı hesaplayan  
+> **modüler ve genişletilebilir** ulaşım planlama sistemi.
+
+---
+
+## 📌 Proje Özeti
+
+Bu proje, şehir içi ulaşımda **çok modlu rota planlama** problemini ele alan,
+**graf teorisi** ve **nesne yönelimli tasarım prensipleri** üzerine kurulmuş
+dinamik bir sistemdir.
+
+Kullanıcılar:
+
+- Başlangıç ve varış noktalarını **interaktif harita** üzerinden seçebilir
+- **Yolcu tipi** (Öğrenci / Yaşlı / Genel)
+- **Ödeme yöntemi** (Nakit / Kredi Kartı / Kentkart)
+- **Optimizasyon kriteri** (En ucuz / En hızlı / En kısa)
+
+belirleyerek kendileri için **en uygun güzergâhı** anlık olarak elde edebilir.
+
+---
+
+## 🎯 Problemin Tanımı
+
+Geleneksel ulaşım sistemleri:
+
+- Tek ulaşım moduna odaklanır
+- Kullanıcı tercihlerini yeterince dikkate almaz
+- Dinamik genişlemeye kapalıdır
+
+Bu proje, **çoklu ulaşım modlarını**, **farklı kullanıcı profillerini** ve
+**fiyatlandırma politikalarını** tek bir mimari altında birleştirerek
+bu eksikleri gidermeyi hedefler.
+
+---
+
+## 🧠 Temel Yaklaşım
+
+### 🔹 Graf Tabanlı Modelleme
+
+- Her **durak** bir düğüm (vertex)
+- Duraklar arası bağlantılar **kenar** (edge)
+- Kenar ağırlıkları:
+  - Mesafe
+  - Süre
+  - Ücret
+
+### 🔹 Dijkstra Algoritması
+
+- En kısa yol problemi çözümü
+- Ağırlık türü **dinamik** olarak seçilebilir
+- Kullanıcı tercihine göre:
+  - En ucuz
+  - En hızlı
+  - En kısa rota hesaplanır
+
+---
+
+## 🧩 Mimari Tasarım
 
 ### 🏗️ Nesne Yönelimli Tasarım (OOP)
 
